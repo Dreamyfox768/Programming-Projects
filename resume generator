@@ -28,10 +28,16 @@ A simple desktop app built using Python and Tkinter that allows users to input p
 ## imports
 - tkinter (tk, ttk, messagebox, filedialog)
 - os
--docx
+-Document
+-Enum
 ---
-##classes 
-- Resume_Generator 
+##OOP 
+- Classes
+-Inhertance
+-enumeration
+-class sepration 
+-property Decorator 
+
 
 
 
