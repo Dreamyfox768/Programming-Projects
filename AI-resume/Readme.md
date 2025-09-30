@@ -29,16 +29,17 @@ A simple yet powerful desktop application built with Python and Tkinter that ena
 ## imports
 - tkinter (tk, ttk, messagebox, filedialog)
 - os
--Document
--Enum
--Openai
+- Document
+- Enum
+- Openai
 ---
 ##OOP 
 - Classes
--Inhertance
--enumeration
--class sepration 
--property Decorator 
+- Inhertance
+- enumeration
+- class sepration 
+- property Decorator
+- testers (>>>)
 
 
 
