@@ -23,6 +23,7 @@ A simple desktop app built using Python and Tkinter that allows users to input p
 - Python 🐍
 - Tkinter (GUI)
 - python-docx (Word export)
+- Openai API
 
 ---
 ## imports
@@ -30,6 +31,7 @@ A simple desktop app built using Python and Tkinter that allows users to input p
 - os
 -Document
 -Enum
+-Openai
 ---
 ##OOP 
 - Classes
