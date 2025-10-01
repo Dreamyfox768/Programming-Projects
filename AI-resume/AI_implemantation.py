@@ -1,3 +1,5 @@
+#Implementing AI in python is easy 
+#pip install prefered AI agent
 import openai
 
 # Replace with your actual API key 
