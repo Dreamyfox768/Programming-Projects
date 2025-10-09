@@ -31,11 +31,7 @@ class body_part2:
         self.application = input("application: ").strip()
         self.soft= input("softskills: ").strip()
 
-
-        ...
-
     def certs(self):
-
         self.num = int(input("enter how many job certs you have, enter zero to move on  "))
         while self.num > 0:
             self.date = input("Enter start date for certs received:").strip()
@@ -43,11 +39,7 @@ class body_part2:
             self.code = input(" certification code").strip()
             self.num -= 1
             final = f'{self.name}{self.code}{self.date}'
-
             self.store.append(final)
-
-
-
     def __str__(self):
         formatted_certs = "\n".join(self.store)
         return (f"Skills|Certifications "
@@ -55,7 +47,6 @@ class body_part2:
                 f"Tool: {self.tool} \nApplication: {self.application}  \nsoftskills:{self.soft}  \n"
                 f"Certifications|"
                 f"{formatted_certs}")
-        ...
 
 def main():
     print("\n=== information in the body no AI  ===")
