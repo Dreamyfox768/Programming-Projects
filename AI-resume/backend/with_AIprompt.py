@@ -1,58 +1,47 @@
-'''
-AI implemented oes
-job description
-volunteer
-skills?
-
-non AI
-skills?
-certs
-'''
-
-
-class body_part2:
+class body_part1:
     def __init__(self):
         self.num = ''
-        self.date = ''
-        self.os = ''
-        self.langua = ''
-        self.tool = ''
-        self.application = ''
-        self.soft = ''
-        self.name = ''
-        self.code = ''
-        self.store = []
-        self.fix = ''
+        self.start = ''
+        self.end = ''
+        self.posi = ''
+        self.company = ''
+        self.jobs = []
+        self.role = ''
+        self.organi = ''
+        self.vols = []
 
-    def skill(self):
-        self.os = input("OS:").strip()
-        self.langua = input("Language(Software): ").strip()
-        self.tool= input("tool: ").strip()
-        self.application = input("application: ").strip()
-        self.soft= input("softskills: ").strip()
-
-    def certs(self):
-        self.num = int(input("enter how many job certs you have, enter zero to move on  "))
+    def job_experience(self):
+        self.num = int(input("Enter how many job experiences you have (0 to skip): "))
         while self.num > 0:
-            self.date = input("Enter start date for certs received:").strip()
-            self.name = input("Enter name of certification").strip()
-            self.code = input(" certification code").strip()
             self.num -= 1
-            final = f'{self.name}{self.code}{self.date}'
-            self.store.append(final)
+            self.start = input("Enter start date of your work: ").strip()
+            self.end = input("Enter end date (or 'present'): ").strip()
+            self.posi = input("Enter job position: ").strip()
+            self.company = input("Enter company name: ").strip()
+
+            self.jobs.append(f"{self.posi} | {self.company} ({self.start} - {self.end})")
+
+    def volunteer_experience(self):
+        self.num = int(input("Enter how many volunteer experiences you have (0 to skip): "))
+        while self.num > 0:
+            self.num -= 1
+            self.role = input("Enter volunteering role: ").strip()
+            self.organi = input("Enter organization name: ").strip()
+
+            self.vols.append(f"{self.role} | {self.organi}")
+
     def __str__(self):
-        formatted_certs = "\n".join(self.store)
-        return (f"Skills|Certifications "
-                f"Operating System:{self.os}  \nLanguage: {self.langua}  \n"
-                f"Tool: {self.tool} \nApplication: {self.application}  \nsoftskills:{self.soft}  \n"
-                f"Certifications|"
-                f"{formatted_certs}")
+        job_section = "\n".join(self.jobs)
+        vol_section = "\n".join(self.vols)
+        return (f"\n--- Job Experience ---\n{job_section}"
+                f"\n--- Volunteering Experience ---\n{vol_section}")
+
 
 def main():
-    print("\n=== information in the body no AI  ===")
-    user = body_part2()
-    user.skill()
-    user.certs()
+    print("\n=== Resume Input (No bullet points) ===")
+    user = body_part1()
+    user.job_experience()
+    user.volunteer_experience()
     print(user)
 
 if __name__ == "__main__":
