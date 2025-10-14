@@ -1,4 +1,4 @@
-# If you are a reader like myself, this is for us! 
+# If you are a reader like myself, this is for us! MVP design
 - Book collection
 - Reading progress
 - Search with title or author
