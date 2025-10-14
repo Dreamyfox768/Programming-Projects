@@ -3,14 +3,9 @@
 - Reading progress
 - Search with title or author
 - Basic quick UI
-    -Button to add book
-    -add title, author, or ISP
-    -bookshelf
-    -progress
-    -add note
+    - Button to add book
+    - Add title, author, or ISP
+    - Bookshelf
+    - Progress
+    - Add note
   - Google book API
-- Top-level item 1
-  - Nested item 1.1
-    - Further nested item 1.1.1
-  - Nested item 1.2
-- Top-level item 2
