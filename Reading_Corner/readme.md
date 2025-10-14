@@ -8,4 +8,4 @@
     - Bookshelf
     - Progress
     - Add note
-  - Google book API
+- Google book API
