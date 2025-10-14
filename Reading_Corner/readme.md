@@ -1,2 +1,11 @@
 # If you are a reader like myself, this is for us! 
-Making app for my beautiful books. It will for my TBR (To Be Read) pile. 
+- Book collection
+- Reading progress
+- Search with title or author
+- Basic quick UI
+    -Button to add book
+    -add title, author, or ISP
+    -bookshelf
+    -progress
+    -add note
+  - Google book API
