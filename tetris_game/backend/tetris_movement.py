@@ -1,3 +1,7 @@
+'''
+The shapes of tetris
+'''
+
 import turtle as tt
 from random import randint
 from math import sin , cos , pi
