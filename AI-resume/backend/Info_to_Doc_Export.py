@@ -1,50 +1,42 @@
-# resume_builder.py
-
 from docx import Document
-from AI_Implementation import body_part1 
-from class_for_body import BodyPart2 #not ai
-from resumebackend import Personal #personal info
-'''
-install package 
-import and create 
-'''
+from Body_withAI import body_part1
+from Body_notAI import BodyPart2
+from Personal_Info import Personal
 
-class exporttodoc:
-    def __init__(self, data = None):
+class Exporttodoc:
+    """Class to build and export a resume to a Word document."""
 
-        self.document = Document()
-        self.data = data
-        self.personal_info = Personal()  # Instantiate your all import class
-        self.vol_job = body_part1
-        self.skill_cets = BodyPart2
-    def heading(self):
-        self.document.add_heading("Resume", level=1)
-    def name_personal(self):
-        self.personal_info.collect_info()
-    def education(self):
-        self.personal_info.education()
-    def Technical_skills_certs(self):
-        self.skill_cets.skill()
-        self.skill_cets.certs()
-    def exprience_volunteerign(self):
-        self.vol_job.job_experience()
-        self.vol_job.job_experience()
+    def __init__(self, personal: Personal, skills: BodyPart2, jobs: body_part1, file_path="resume_export.docx"):
+        """
+        Initialize the export class with personal info, skills, jobs, and the target file path.
+
+        Args:
+            personal (Personal): Personal information object.
+            skills (BodyPart2): Skills and certifications object.
+            jobs (body_part1): Job experience object.
+            file_path (str, optional): Path to save the Word document. Defaults to 'resume_export.docx'.
+        """
+        self.document = Document()          # Create a new Word document
+        self.personal_info = personal       # Store the personal info object
+        self.skill_certs = skills           # Store the skills/certifications object
+        self.vol_job = jobs                 # Store the job experience object
+        self.file_path = file_path          # Store the output file path
+
+    def build_resume(self):
+        """Add all sections (heading, personal info, skills, jobs) to the document."""
+        # Add a main heading with the full name
+        self.document.add_heading(self.personal_info.full_name, level=1)
+
+        # Add personal information section
+        self.document.add_paragraph(str(self.personal_info))
+
+        # Add skills and certifications section
+        self.document.add_paragraph(str(self.skill_certs))
+
+        # Add job experience section
+        self.document.add_paragraph(str(self.vol_job))
+
     def export(self):
-        self.document.save("my_exported_document.docx")
-
-def main():
-    builder = exporttodoc()
-    builder.heading()
-    builder.name_personal()
-    builder.education()
-    builder.Technical_skills_certs()
-    builder.exprience_volunteerign()
-    builder.export()
-
-
-if __name__ == "__main__":
-    main()
-
-
-
-
+        """Save the Word document to the specified file path."""
+        self.document.save(self.file_path)
+        print(f"Resume exported successfully as '{self.file_path}'.")
