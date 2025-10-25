@@ -1,7 +1,7 @@
 Resume Generator 
 # 📝 AI_Resume Generator App (Desktop)
 
-A simple yet powerful desktop application built with Python and Tkinter that enables users to input their personal, educational, and professional information. Leveraging AI technology, the app generates a polished, well-structured resume. Users can conveniently export the resume as a Microsoft Word (.docx) file for easy sharing and editing.
+#A Python Tkinter app that collects user info, uses AI to generate a polished resume, and exports it as a Word (.docx) file.
 ---
 
 ## 🚀 Features
