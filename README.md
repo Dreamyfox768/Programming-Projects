@@ -10,7 +10,7 @@ Welcome! This repository showcases **6 full-stack projects** I've developed usin
 |--------|-------------|--------------|
 | 🔹 [AI Resume](./AI-resume) | AI resume generator for all. | Python, OpenAI API |
 | 💬 [AI Chatbot](./AI_chatbot) | coming soon...
-| 🔌 [Arduino Integration](./Arduino_) | Arduino project with Python backend to collect and visualize sensor data. | Arduino, ArduinoIDE (C++) |
+| 🔌 [Arduino Integration](./Arduino_) | Arduino project with C++ backend to collect and visualize sensor data. | Arduino, ArduinoIDE (C++) |
 | 📚 [Reading Corner](./Reading_Corner) | A personal reading tracker and book review site. | Python, JSON|
 | 📊 [WBS (Work Breakdown System)](./WBS) |  coming soon...
 | 🎮 [Tetris Game](./tetris_game) | A playable Tetris game built from scratch. | Python, turtle |
