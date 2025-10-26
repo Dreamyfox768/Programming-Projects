@@ -35,6 +35,9 @@ class Exporttodoc:
 
         # Add job experience section
         self.document.add_paragraph(str(self.vol_job))
+        #add AI
+        self.document.add_paragraph(str(self.vol_job.generate_job_descriptions()))
+
 
     def export(self):
         """Save the Word document to the specified file path."""
