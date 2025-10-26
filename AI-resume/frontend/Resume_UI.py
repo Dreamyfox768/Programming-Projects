@@ -248,6 +248,7 @@ class ResumeUI:
         # 'sticky="e"' aligns the label to the right (east)
         # 'padx' and 'pady' add spacing around the label
         tk.Label(form, text="Position:", bg="#C8E6C9", fg="black").grid(row=0, column=0, sticky="e", padx=5, pady=5)
+        tk.Label(form, text="Company:", bg="#C8E6C9", fg="black").grid(row=1, column=0, sticky="e", padx=5, pady=5)
 
         # Create an entry widget for the 'Position' field
         # 'width=40' sets the width of the text box
@@ -256,9 +257,12 @@ class ResumeUI:
         entry = tk.Entry(form, width=40, fg="black", bg="#E8F5E9", insertbackground="black")
         entry.grid(row=0, column=1, padx=5, pady=5)  # Place entry next to its label
 
+        entry = tk.Entry(form, width=40, fg="black", bg="#E8F5E9", insertbackground="black")
+        entry.grid(row=1, column=1, padx=5, pady=5)  # Place entry next to its label
         # Store the entry widget in a dictionary for later access
         # Allows retrieving user input for the 'Position' field
         self.ai_entries["Position:"] = entry
+        self.ai_entries["Company:"] = entry
 
         """
         Summary:
