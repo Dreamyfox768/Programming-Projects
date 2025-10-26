@@ -1,24 +1,24 @@
-import openai
+from openai import OpenAI
 
-# Replace with your actual OpenAI API key
-openai.api_key = "YOUR_API_KEY"
+# Initialize OpenAI client
+client = OpenAI(api_key="")  # ← Replace with your real key
+
 
 class body_part1:
     """Class to store and manage a user's job experiences."""
 
     def __init__(self):
-        # Initialize all attributes
-        self.num = ''       # Number of jobs to input
-        self.start = ''     # Start date for a job
-        self.end = ''       # End date for a job
-        self.posi = ''      # Job position/title
-        self.company = ''   # Company name
-        self.jobs = []      # List to store formatted job entries
+        self.num = ''
+        self.start = ''
+        self.end = ''
+        self.posi = ''
+        self.company = ''
+        self.jobs = []
 
     def job_experience(self, *ui_data):
         """
         Collects job experience information from the user.
-        Each entry will be stored as a string: "Position | Company (Start - End)"
+        Each entry should be a tuple: (posi, company, start, end)
         """
         try:
             self.num = int(input("Enter how many job experiences you have (0 to skip): "))
@@ -28,46 +28,46 @@ class body_part1:
 
         while self.num > 0:
             self.num -= 1
-            self.start = input("Enter start date of your work: ").strip()  # Prompt for start date
-            self.end = input("Enter end date (or 'present'): ").strip()    # Prompt for end date
-            self.posi = input("Enter job position: ").strip()              # Prompt for position
-            self.company = input("Enter company name: ").strip()           # Prompt for company
-            # Append formatted job string to the list
+            self.start = input("Enter start date of your work: ").strip()
+            self.end = input("Enter end date (or 'present'): ").strip()
+            self.posi = input("Enter job position: ").strip()
+            self.company = input("Enter company name: ").strip()
             self.jobs.append(f"{self.posi} | {self.company} ({self.start} - {self.end})")
 
     def generate_job_descriptions(self):
         """
         Uses OpenAI to generate 3 bullet point descriptions for each job experience.
-        Prints AI-generated descriptions to the console.
+        Returns the full AI output as a string (for use in Tkinter UI or export).
         """
-        print("\n=== AI-Generated Job Descriptions ===")
+        output_text = "=== AI-Generated Job Descriptions ===\n"
+
         for job in self.jobs:
             try:
-                # Split the job string into position and company/date parts
+                # Split stored string: "Position | Company (Start - End)"
                 posi, rest = job.split(" | ")
-                company, dates = rest.rsplit("(", 1)
-                # Construct prompt for OpenAI
+                company = rest.split("(")[0].strip()
+
                 prompt = (
-                    f"Generate 3 professional bullet points describing the responsibilities and achievements "
-                    f"for a {posi.strip()} at {company.strip()}. Keep it concise and impactful."
+                    f"Generate 3 concise, professional bullet points describing the responsibilities "
+                    f"and key achievements for a {posi.strip()} at {company}. "
+                    f"Keep it impactful and resume-ready."
                 )
 
-                # Call OpenAI API to generate text
-                response = openai.ChatCompletion.create(
-                    model="gpt-4",
+                response = client.chat.completions.create(
+                    model="gpt-4o-mini",
                     messages=[{"role": "user", "content": prompt}],
-                    temperature=0.7
+                    temperature=0.7,
                 )
 
-                # Display AI-generated content
-                print(f"\n🔹 {posi.strip()} at {company.strip()} ({dates.strip()}")
-                print(response['choices'][0]['message']['content'])
+                ai_text = response.choices[0].message.content.strip()
+                output_text += f"\n\n🔹 {posi.strip()} at {company}\n{ai_text}\n"
 
             except Exception as e:
-                print(f"Error generating description for {job}: {e}")
+                output_text += f"\nError generating description for {job}: {e}\n"
+
+        return output_text
 
     def __str__(self):
-        """Return a formatted string of all job experiences for display or export."""
         job_section = "\n".join(self.jobs) if self.jobs else "None"
         return f"\n--- Job Experience ---\n{job_section}"
 
@@ -76,12 +76,10 @@ def main():
     print("\n=== Resume Input (No bullet points) ===")
     user = body_part1()
 
-    # Interactive input from user
+    # Interactive input only
     user.job_experience()
 
-    # Print entered jobs
     print(user)
-    # Generate AI descriptions
     user.generate_job_descriptions()
 
 
