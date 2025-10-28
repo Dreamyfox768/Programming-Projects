@@ -16,14 +16,15 @@ My TBR Library (To-Be-Read Library)
 ---
 - Uses a clean Python class (Books) to handle API requests and data extraction.
 - easy, simple, and cute UI 
-
+---
 🧩 Tech Stack
 ---
-Python 3.x
-Tkinter – for the UI
-Pillow (PIL) – for book cover images
-Requests – to call the OpenLibrary API
+- Python 3.x
+- Tkinter – for the UI
+- Pillow (PIL) – for book cover images
+- Requests – to call the OpenLibrary API
+---
 
 🪶 Future Features (a.k.a. “Someday Shelf”)
 ---
-Track reading progress 📊
+- Track reading progress 📊
