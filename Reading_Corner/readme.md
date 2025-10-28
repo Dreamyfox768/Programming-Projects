@@ -1,6 +1,5 @@
 # 📚 My TBR Library
 If you’re a book hoarder who swears you’ll “get to it eventually”… this one’s for you.
-✨ About the Project
 ---
 My TBR Library (To-Be-Read Library) 
 💡 Features
@@ -11,6 +10,7 @@ My TBR Library (To-Be-Read Library)
     - Can’t remember if you’ve already added that one novel you swear you’ll finish someday? Search by ISBN to check.
 - 🗑️ Remove Books
     - Declutter your shelf (digitally, at least).
+---
   
 🧠 Backend Brains
 ---
