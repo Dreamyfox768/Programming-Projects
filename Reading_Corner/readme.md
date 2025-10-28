@@ -2,21 +2,23 @@
 If you’re a book hoarder who swears you’ll “get to it eventually”… this one’s for you.
 ✨ About the Project
 ---
-My TBR Library (To-Be-Read Library) is a simple, cozy desktop app for readers who want to keep track of their book collection, reading progress, and notes — without needing another browser tab or spreadsheet.
+My TBR Library (To-Be-Read Library) 
 💡 Features
 ---
 📖 Add Books by ISBN
-Quickly fetch book info from the OpenLibrary API — title, author, publish date, and cover image (if available).
+- Quickly fetch book info from the OpenLibrary API — title, author, publish date, and cover image (if available).
 🔍 Find a Book
-Can’t remember if you’ve already added that one novel you swear you’ll finish someday? Search by ISBN to check.
+- Can’t remember if you’ve already added that one novel you swear you’ll finish someday? Search by ISBN to check.
 🗑️ Remove Books
-Declutter your shelf (digitally, at least).
-🪄 Pretty & Simple UI
+- Declutter your shelf (digitally, at least).
 Add books with a button click
-View covers and details on your shelf
-Scrollable display for all your literary trophies
+- View covers and details on your shelf
+  
 🧠 Backend Brains
-Uses a clean Python class (Books) to handle API requests and data extraction.
+---
+- Uses a clean Python class (Books) to handle API requests and data extraction.
+- easy, simple, and cute UI 
+
 🧩 Tech Stack
 ---
 Python 3.x
