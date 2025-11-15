@@ -1,1 +1,1 @@
-# 🛠️ Using ollama to run LLM model locally. Use python
+# 🛠️ Using ollama to run LLM model locally. Use langchain in python 
