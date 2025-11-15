@@ -29,7 +29,9 @@ Welcome! This repository showcases **6 full-stack projects** I've developed usin
 ## 🛠️ Technologies Used
 
 - **Python** 
-- **Arduino C++**
+- **Arduino IDE C++**
 - **OpenAI API**, NLP libraries
+- **Streamlit
+- Langchain
 
 
