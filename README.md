@@ -31,7 +31,7 @@ Welcome! This repository showcases **6 full-stack projects** I've developed usin
 - **Python** 
 - **Arduino IDE C++**
 - **OpenAI API**, NLP libraries
-- **Streamlit
-- Langchain
+- **Streamlit**
+- **Langchain**
 
 
