@@ -1,6 +1,6 @@
 # TherapistBot: AI Mental Health Support Chatbot
 
-**TherapistBot** is an AI-powered chatbot designed to provide accessible, empathetic, and ethical mental health advice. Using the **Langchain** framework and **Ollama** for language generation, it answers common mental health-related questions while adhering to strict guidelines to ensure safety and appropriateness.
+**SupportBot** is an AI-powered chatbot designed to provide accessible, empathetic, and ethical mental health advice. Using the **Langchain** framework and **Ollama** for language generation, it answers common mental health-related questions while adhering to strict guidelines to ensure safety and appropriateness.
 
 ---
 
