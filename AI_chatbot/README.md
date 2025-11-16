@@ -31,7 +31,7 @@ Millions of people worldwide face mental health challenges but lack consistent a
 - **Frontend**: [Streamlit] – For building the interactive user interface.
 - **Backend**: [Langchain] – For handling query processing and data retrieval.
 - **Language Model**: [Ollama] – A language model for generating empathetic responses.
-- **Data Source**: A **text or .doc file** containing therapist tips, tricks, and ethical guidelines for safe conversation.
+- **Data Source**: [SQLite3] and A **text or .doc file** containing therapist tips, tricks, and ethical guidelines for safe conversation.
 
 ---
 
