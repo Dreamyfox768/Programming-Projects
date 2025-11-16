@@ -28,9 +28,9 @@ Millions of people worldwide face mental health challenges but lack consistent a
 
 ## Tech Stack
 
-- **Frontend**: [Streamlit](https://streamlit.io/) – For building the interactive user interface.
-- **Backend**: [Langchain](https://langchain.com/) – For handling query processing and data retrieval.
-- **Language Model**: [Ollama](https://ollama.com/) – A language model for generating empathetic responses.
+- **Frontend**: [Streamlit] – For building the interactive user interface.
+- **Backend**: [Langchain] – For handling query processing and data retrieval.
+- **Language Model**: [Ollama] – A language model for generating empathetic responses.
 - **Data Source**: A **text or .doc file** containing therapist tips, tricks, and ethical guidelines for safe conversation.
 
 ---
@@ -44,7 +44,5 @@ Millions of people worldwide face mental health challenges but lack consistent a
 3. **Response Generation**: The chatbot generates an answer using the **Ollama** language model, ensuring that the response is helpful and empathetic.
 4. **Query Rejection**: If the query is deemed out-of-scope (e.g., harmful or inappropriate), the chatbot politely refuses to answer, explaining the reason.
 
-### System Architecture
 
-Here’s a high-level diagram of the system architecture:
 
