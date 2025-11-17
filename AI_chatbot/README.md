@@ -42,4 +42,4 @@ Millions of people worldwide face mental health challenges but lack consistent a
 - **Response Generation**: Ollama generates a helpful and empathetic response based on the user input.
 - **Query Rejection**: If a query is harmful or inappropriate, the bot politely refuses to answer and explains why.
 - **Mood Visualization**: Users can track mood trends over 10 days through the Streamlit dashboard.
-- **Cache Clearing**: Once user refreshes the website, all data will be deleted. 
+- **Cache Clearing**: Once user refreshes the website, all data will be deleted. <3
