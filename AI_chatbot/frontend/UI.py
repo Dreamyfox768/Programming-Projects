@@ -3,12 +3,18 @@ from state_manager import StateManager
 from chat_page import ChatPage
 from mood_page import MoodPage
 
+
 class app:
-    #css
+    """
+    Main application controller.
+    Renders the sidebar navigation and switches between the Chat page
+    and Mood Tracker page based on user selection.
+    """
+
     st.markdown(
         """
-        <h1 style="font-family: 'Brush Script MT', cursive; text-align: position: fixed; color: pink; font-size: Large;">
-          Options 👆 
+        <h1 style="font-family: 'Brush Script MT', cursive; position: fixed; color: pink; font-size: Large;">
+            Options 👆
         </h1>
         """,
         unsafe_allow_html=True
