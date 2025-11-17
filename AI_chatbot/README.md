@@ -10,13 +10,6 @@ Millions of people worldwide face mental health challenges but lack consistent a
 
 ---
 
-## Solution Overview
-
-**TherapistBot** offers AI-driven mental health support through conversational guidance. The chatbot uses:
-
-- **LangChain** for processing and managing user queries.
-- **Ollama** for generating empathetic and helpful responses.
-- A **tips and guidelines file** (.txt or .doc) to ensure responses are safe, ethical, and in line with professional advice.
 
 ### Key Features
 
@@ -32,7 +25,7 @@ Millions of people worldwide face mental health challenges but lack consistent a
 - **Frontend**: Streamlit – For building the interactive UI and visualizing mood data.
 - **Backend**: LangChain – For handling query processing and AI integration.
 - **Language Model**: Ollama – Generates empathetic and relevant responses.
-- **Data Source**: SQLite3 – Tracks user mood over time, and a **text or .doc file** containing ethical guidelines and therapist tips.
+- **Data Source**: SQLite – Tracks user mood over time. Nothing personal will be saved. 
 
 ---
 
@@ -40,8 +33,9 @@ Millions of people worldwide face mental health challenges but lack consistent a
 
 ### User Flow
 
-- **User Interaction**: Users input questions or concerns related to mental health.
+- **User Interaction**: Users input anything and start the chat with chatbit. 
 - **Guideline Check**: The system verifies queries against the guidelines file to ensure safety and relevance.
 - **Response Generation**: Ollama generates a helpful and empathetic response based on the user input.
 - **Query Rejection**: If a query is harmful or inappropriate, the bot politely refuses to answer and explains why.
 - **Mood Visualization**: Users can track mood trends over 10 days through the Streamlit dashboard.
+- **Cache Clearing**: Once user refreshes the website, all data will be deleted. 
