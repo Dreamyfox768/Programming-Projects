@@ -1,37 +1,38 @@
 # TherapistBot: AI Mental Health Support Chatbot
 
-**SupportBot** is an AI-powered chatbot designed to provide accessible, empathetic, and ethical mental health advice. Using the **Langchain** framework and **Ollama** for language generation, it answers common mental health-related questions while adhering to strict guidelines to ensure safety and appropriateness.
+**SupportBot** is an AI-powered chatbot designed to provide accessible, empathetic, and judgment-free mental health support. Using the **LangChain** framework and **Ollama** for language generation, it helps users take the first step toward addressing mental health challenges while adhering to strict guidelines to ensure safety and appropriateness.
 
 ---
 
 ## Problem Statement
 
-Millions of people worldwide face mental health challenges but lack consistent access to mental health professionals. Traditional therapy can be expensive, and waiting for professional help can cause further distress. **TherapistBot** offers immediate, anonymous support to individuals seeking advice on mental well-being, helping to bridge the gap between people and therapists.
+Millions of people worldwide face mental health challenges but lack consistent access to mental health professionals. Traditional therapy can be expensive, and waiting for help can worsen distress. **TherapistBot** provides immediate, anonymous support to individuals seeking guidance, helping bridge the gap between those in need and professional care.
 
 ---
 
 ## Solution Overview
 
-**TherapistBot** provides mental health advice using conversational AI. The chatbot utilizes:
+**TherapistBot** offers AI-driven mental health support through conversational guidance. The chatbot uses:
 
-- **Langchain** for handling and processing user queries.
-- **Ollama** for generating relevant responses to user inputs.
-- A **tips and guidelines file** (.txt or .doc) to help the bot respond based on ethical guidelines, ensuring safety and avoiding harmful queries.
+- **LangChain** for processing and managing user queries.
+- **Ollama** for generating empathetic and helpful responses.
+- A **tips and guidelines file** (.txt or .doc) to ensure responses are safe, ethical, and in line with professional advice.
 
 ### Key Features
 
-- **Mental health support**: Provides empathetic and relevant advice on various mental health topics.
-- **Guideline-based filtering**: Filters out harmful or malicious queries and refuses them politely based on predefined rules.
-- **Open-source**: The project is fully open-source, allowing for community-driven improvements.
+- **Mental health support**: Provides empathetic guidance on emotional well-being and coping strategies.
+- **Guideline-based filtering**: Detects and politely refuses harmful or inappropriate queries based on predefined ethical rules.
+- **Mood tracking**: Logs and visualizes user mood over a 10-day period using SQLite and Streamlit.
+- **Open-source**: Fully open-source to encourage community-driven improvements.
 
 ---
 
 ## Tech Stack
 
-- **Frontend**: [Streamlit] – For building the interactive user interface.
-- **Backend**: [Langchain] – For handling query processing and data retrieval.
-- **Language Model**: [Ollama] – A language model for generating empathetic responses.
-- **Data Source**: [SQLite3] and A **text or .doc file** containing therapist tips, tricks, and ethical guidelines for safe conversation.
+- **Frontend**: Streamlit – For building the interactive UI and visualizing mood data.
+- **Backend**: LangChain – For handling query processing and AI integration.
+- **Language Model**: Ollama – Generates empathetic and relevant responses.
+- **Data Source**: SQLite3 – Tracks user mood over time, and a **text or .doc file** containing ethical guidelines and therapist tips.
 
 ---
 
@@ -39,10 +40,8 @@ Millions of people worldwide face mental health challenges but lack consistent a
 
 ### User Flow
 
-1. **User Interaction**: The user enters a question or a query related to mental health.
-2. **Guideline Check**: The system checks the query against a pre-built knowledge base (the .txt/.doc file) containing therapist guidelines and advice.
-3. **Response Generation**: The chatbot generates an answer using the **Ollama** language model, ensuring that the response is helpful and empathetic.
-4. **Query Rejection**: If the query is deemed out-of-scope (e.g., harmful or inappropriate), the chatbot politely refuses to answer, explaining the reason.
-
-
-
+- **User Interaction**: Users input questions or concerns related to mental health.
+- **Guideline Check**: The system verifies queries against the guidelines file to ensure safety and relevance.
+- **Response Generation**: Ollama generates a helpful and empathetic response based on the user input.
+- **Query Rejection**: If a query is harmful or inappropriate, the bot politely refuses to answer and explains why.
+- **Mood Visualization**: Users can track mood trends over 10 days through the Streamlit dashboard.
