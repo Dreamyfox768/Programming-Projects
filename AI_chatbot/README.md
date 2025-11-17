@@ -25,8 +25,12 @@ Millions of people worldwide face mental health challenges but lack consistent a
 - **Frontend**: Streamlit – For building the interactive UI and visualizing mood data.
 - **Backend**: LangChain – For handling query processing and AI integration.
 - **Language Model**: Ollama – Generates empathetic and relevant responses.
-- **Data Source**: SQLite – Tracks user mood over time. Nothing personal will be saved. 
+- **Data Source**: SQLite – Tracks user mood over time. Nothing personal will be saved.
+---
+## License for Langchain, and Streamlit 
 
+- Langchain = Under MIT License
+- Streamlit = Apache 2.0 Lincense
 ---
 
 ## Features & How It Works
