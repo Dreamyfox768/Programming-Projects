@@ -14,8 +14,6 @@ class app:
         unsafe_allow_html=True
     )
 
-
-
     StateManager.initialize()
     st.sidebar.title("Navigation")
 
